@@ -1,23 +1,67 @@
-index.html
+<!DOCTYPE html>
 <html>
 <head>
-<title>Para Mon Amour</title>
+<meta charset="UTF-8">
+<title>Para Ti Mivida 💖</title>
 </head>
 
-<body style="text-align:center; font-family:Arial; background-color:#ffe6f0;">
+<body style="margin:0; background:#ffe6f0; text-align:center; font-family:Arial; overflow:hidden;">
 
-<h1>Hola miamor 💖</h1>
+<h1 style="color:#ff3366; font-size:50px; margin-top:40px;">
+Hola Amor 💕
+</h1>
 
-<p>Esta página es solo para decirte que eres muy especial para mí y no quiero que te alejes de mi vida ;3.</p>
+<p style="font-size:22px;">
+Esta página es solo para recordarte lo especial que eres para mí y que no quiero que me dejes nunca:3
+</p>
 
-<button onclick="mensaje()">Haz clic aquí</button>
+<button onclick="mensaje()" 
+style="padding:15px 30px; font-size:20px; border:none; border-radius:10px; background:#ff4d88; color:white; cursor:pointer;">
+Presiona aquí 💌
+</button>
+
+<br><br>
+
+<!-- Música (opcional, sube un mp3 al repo si quieres usarlo) -->
+<!--
+<audio autoplay loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+-->
 
 <script>
 function mensaje(){
-    alert("Te amo muchísisisisisisimo miniña hermosa ❤️");
+  alert("Te amo muchísimo miniña ❤️ Gracias por existir ✨");
 }
+</script>
+
+<!-- Corazones cayendo -->
+<script>
+setInterval(function(){
+  let corazon = document.createElement("div");
+  corazon.innerHTML = "💖";
+  corazon.style.position = "fixed";
+  corazon.style.left = Math.random()*100 + "vw";
+  corazon.style.top = "-20px";
+  corazon.style.fontSize = "30px";
+  corazon.style.opacity = 0.8;
+  corazon.style.transition = "top 3s linear";
+
+  document.body.appendChild(corazon);
+
+  setTimeout(()=>{
+    corazon.style.top = "100vh";
+  },50);
+
+  setTimeout(()=>{
+    corazon.remove();
+  },3000);
+
+},500);
 </script>
 
 </body>
 </html>
+
+
 
